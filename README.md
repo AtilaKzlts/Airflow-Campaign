@@ -23,7 +23,7 @@ This setup allows the marketing team to better analyze the effectiveness of the 
 
 + **Automation**: Apache Airflow DAG is run monthly to ensure continuous data update.
 
-[See Full Script](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/airflow_script.py)
+[See DAG](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/airflow_script.py)
 
 
 ## Snapshot
