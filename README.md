@@ -29,8 +29,6 @@ This setup allows the marketing team to better analyze the effectiveness of the 
 
 + **Data Cleaning and Processing**: Data cleaning operations including calculation of metrics like CTR and CPC were performed using Apache Airflow script.
 
-![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/dag_diag.png)
-
 + **Data Storage**: Cleaned data was uploaded to Google Sheets via API for sharing and small size.
 
 + **Visualization**: Processed data was used to create reports and live dashboards using Tableau.
