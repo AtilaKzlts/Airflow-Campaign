@@ -37,6 +37,7 @@ This setup allows the marketing team to better analyze the effectiveness of the 
 
 [See DAG](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/airflow_script.py)
 
+![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/airflowsheets2.svg)
 
 ## Snapshot
 
