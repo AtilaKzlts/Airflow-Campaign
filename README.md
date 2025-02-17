@@ -38,6 +38,8 @@ In this project, a dynamic data pipeline supported by a live dashboard was creat
 
 ## Snapshot
 
-![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/Dashboard%201.png)
+![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/Dashboard%201.png) 
+
+![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/Dashboard%202.png) 
 
 [See Dashboard](https://public.tableau.com/app/profile/atilla.kiziltas/viz/airlfow/Dashboard1)
