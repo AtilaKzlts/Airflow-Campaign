@@ -3,7 +3,7 @@
 # Campaign Performance Tracking
 
 ## Project Introduction
-In this project, a dynamic data pipeline supported by a live dashboard was created to allow the marketing department to monitor the performance of three different campaigns starting from January 2025, on a monthly basis. As the primary objective of the campaigns is promotion, key performance indicators such as the number of clicks and Cost Per Click (CPC) have been prioritized as essential metrics.
+In this project, a dynamic data pipeline supported by a live dashboard was created to enable the marketing department to track the performance of three different campaigns on a monthly basis starting from January 2025. Since the primary goal of the campaigns was promotion, our main metric was ***impressions***, while key performance indicators such as clicks and Cost Per Click (CPC) were also prioritized as key metrics.
 
 ## About the Dataset
 
