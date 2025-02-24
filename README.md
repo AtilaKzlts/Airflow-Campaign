@@ -26,15 +26,49 @@ In this project, a dynamic data pipeline supported by a live dashboard was creat
 
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/airflowsheets.svg)
 
-+ **Data Collection**: Required data was pulled from AWS S3.
+**Data Collection;**
 
-+ **Data Cleaning and Processing**: Data cleaning operations including calculation of metrics like CTR and CPC were performed using Apache Airflow script.
++ The necessary data was retrieved from AWS S3 using API calls.
+Scheduled to pull the most up-to-date data on a regular basis.
 
-+ **Data Storage**: Cleaned data was uploaded to Google Sheets via API for sharing and small size.
+**Data Cleaning and Processing**
++ The raw data was cleaned to remove errors and missing values.
+Key metrics, such as Click Through Rate (CTR) and Cost Per Click (CPC), were calculated during this step.
+Data was processed using Apache Airflow, ensuring the pipeline was automated and could handle large datasets efficiently.
 
-+ **Visualization**: Processed data was used to create reports and live dashboards using Tableau.
+**Data Storage**
++ Once cleaned and processed, the data was uploaded to Google Sheets via API for easy sharing and further analysis by the marketing team.
 
-+ **Automation**: Apache Airflow DAG is run monthly to ensure continuous data update.
+**Data Visualization**
++ Tableau was used to create live dashboards that visualized the campaign performance metrics.
+This enabled the marketing team to view real-time insights and track the campaigns on a monthly basis.
+
+## DAG structure
+
+**Data Pull (Pull)**
+
+- **Purpose**: To fetch the data from AWS S3.
+- **Method**: The `S3Hook` is used to retrieve the file from S3, which is then converted into a StringIO object and loaded into a Pandas DataFrame.
+- **Error Handling**: An error is raised if the data is empty or cannot be fetched.
+
+**Data Transformation (Transform)**
+
+- **Purpose**: To clean the data, add new columns, and perform logical checks.
+- **Method**: Missing values in the DataFrame are checked, and logical validations are applied (for example, ensuring "clicks" and "impressions" are not negative). New calculations are added, such as `ctr` (click-through rate) and `cpc` (cost per click).
+- **Error Handling**: An `AssertionError` is raised if the data contains invalid values, such as negative numbers.
+
+**Data Load (Load)**
+
+- **Purpose**: To load the transformed data into Google Sheets.
+- **Method**: The Google Sheets API is used to write data to Sheets. The relevant credentials are loaded in JSON format for connecting to Google Sheets. The process ensures that old data is cleaned up before new data is uploaded.
+- **Error Handling**: An error is raised if the connection to Google Sheets cannot be established or if the data cannot be uploaded.
+
+**DAG Structure and Dependencies**
+
+- **Dependencies**: `extract_task` (data pull) → `transform_task` (data transformation) → `load_task` (data load).
+- **Scheduling and Retries**: Each task is configured with 3 retries and a 10-minute interval in case of failure.
+
+This structure ensures that any issues with the data are logged properly, and the task is retried within the specified time intervals.
 
 [See DAG](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/airflow_script.py)
 
