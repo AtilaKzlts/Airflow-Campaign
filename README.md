@@ -41,6 +41,9 @@ Data was processed using Apache Airflow, ensuring the pipeline was automated and
 + Tableau was used to create live dashboards that visualized the campaign performance metrics.
 This enabled the marketing team to view real-time insights and track the campaigns on a monthly basis.
 
+
+-----
+
 ## DAG structure
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/diagram.png)
 
