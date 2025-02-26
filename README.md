@@ -3,6 +3,14 @@
 
 <div align="center"> <h1>Campaign Performance Tracking</h1> </p> </div>
 
+## Table of Contents
+
+- Project Introduction
+  - About the Data Set
+  - Steps
+  - DAG structure
+  - Snapshot
+
 ## Project Introduction
 In this project, a dynamic data pipeline supported by a live dashboard was created to enable the marketing department to track the performance of three different campaigns on a monthly basis starting from January 2025. Since the primary goal of the campaigns was promotion, our main metric was ***impressions***, while key performance indicators such as clicks and Cost Per Click (CPC) were also prioritized as key metrics.
 
@@ -40,6 +48,9 @@ Data was processed using Apache Airflow, ensuring the pipeline was automated and
 **Data Visualization**
 + Tableau was used to create live dashboards that visualized the campaign performance metrics.
 This enabled the marketing team to view real-time insights and track the campaigns on a monthly basis.
+
+
+-----
 
 ## DAG structure
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/diagram.png)
