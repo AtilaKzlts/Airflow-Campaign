@@ -91,9 +91,15 @@ This structure ensures that any issues with the data are logged properly, and th
 
 ## Snapshot
 
+*Dashboard-First-Page*
+
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/Dashboard%201.png) 
 
+*Dashboard-Second-Page*
+
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/Dashboard%202.png) 
+
+*E-Mail*
 
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/email_ss.png)
 
