@@ -89,6 +89,10 @@ This structure ensures that any issues with the data are logged properly, and th
 
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/Dashboard%202.png) 
 
+![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/email_ss.png)
+
+
+
 [See Dashboard](https://public.tableau.com/app/profile/atilla.kiziltas/viz/airlfow_2/Dashboard1)
 
 ### [**Return to Portfolio**](https://github.com/AtilaKzlts/Atilla-Portfolio)
