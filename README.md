@@ -61,19 +61,19 @@ This enabled the marketing team to view real-time insights and track the campaig
 ## DAG structure
 ![image](https://github.com/AtilaKzlts/Airflow-Campaign/blob/main/assets/diagram.png)
 
-**Data Pull (Pull)**
+**Data Pull**
 
 - **Purpose**: To fetch the data from AWS S3.
 - **Method**: The `S3Hook` is used to retrieve the file from S3, which is then converted into a StringIO object and loaded into a Pandas DataFrame.
 - **Error Handling**: An error is raised if the data is empty or cannot be fetched.
 
-**Data Transformation (Transform)**
+**Data Transformation**
 
 - **Purpose**: To clean the data, add new columns, and perform logical checks.
 - **Method**: Missing values in the DataFrame are checked, and logical validations are applied (for example, ensuring "clicks" and "impressions" are not negative). New calculations are added, such as `ctr` (click-through rate) and `cpc` (cost per click).
 - **Error Handling**: An `AssertionError` is raised if the data contains invalid values, such as negative numbers.
 
-**Data Load (Load)**
+**Data Load**
 
 - **Purpose**: To load the transformed data into Google Sheets.
 - **Method**: The Google Sheets API is used to write data to Sheets. The relevant credentials are loaded in JSON format for connecting to Google Sheets. The process ensures that old data is cleaned up before new data is uploaded.
