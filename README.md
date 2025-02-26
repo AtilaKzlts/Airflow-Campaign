@@ -12,7 +12,10 @@
   - Snapshot
 
 ## Project Introduction
-In this project, a dynamic data pipeline supported by a live dashboard was created to enable the marketing department to track the performance of three different campaigns on a monthly basis starting from January 2025. Since the primary goal of the campaigns was promotion, our main metric was ***impressions***, while key performance indicators such as clicks and Cost Per Click (CPC) were also prioritized as key metrics.
+
+In this project, a dynamic data pipeline supported by a live dashboard was created to enable the marketing department to track the performance of three different campaigns on a monthly basis starting from January 2025. Since the primary goal of the campaigns was promotion, impressions were set as the main metric, while key performance indicators such as clicks and Cost Per Click (CPC) were also prioritized.
+
+After all processes are completed, an automated email is sent summarizing key numerical data such as total impressions, clicks, and costs, and provides links to the dashboard and the sheet for detailed review, indicating that the process was successfully completed.
 
 ## About the Dataset
 
@@ -49,6 +52,9 @@ Data was processed using Apache Airflow, ensuring the pipeline was automated and
 + Tableau was used to create live dashboards that visualized the campaign performance metrics.
 This enabled the marketing team to view real-time insights and track the campaigns on a monthly basis.
 
+**Email Notification System**
++ Once the entire process is complete, an automated email is sent summarising the campaigns' key performance metrics such as total impressions, clicks and cost.
++ The email includes links to a live Tableau dashboard and Google Sheets for detailed review and analysis.
 
 -----
 
